@@ -218,17 +218,17 @@ section {
 }
 .hero-container #eoulcenter {
   background-color: #f1c40f;
-  object-fit: cover;
   /* 위치 및 크기 조정의 핵심 */
   transition: transform 0.3s ease;
+  object-fit: cover;
   transform-origin: center; /* 확대되는 기준점 (중앙) */
 }
 .mainmenu #eoulcenter img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   /* 위치 및 크기 조정의 핵심 */
   transition: transform 0.3s ease;
+  object-fit: cover;
   transform-origin: center; /* 확대되는 기준점 (중앙) */
 }
 
@@ -319,6 +319,32 @@ section {
 }
 
 /* ========== calender section =============* */
+.calender {
+}
+.calender .calender-top {
+  display: flex;
+  justify-content: space-between;
+}
+.calender .calender-top h2 {
+}
+.calender .calender-top .category-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.box {
+  width: 40px;
+  height: 40px;
+}
+
+.box .yellow {
+  width: 100%; /* 부모인 .box만큼 꽉 채우기 */
+  height: 100%;
+  background-color: #f1c40f;
+}
+
 .poster-grid {
   display: grid;
   gap: 20px;
@@ -371,70 +397,125 @@ section {
   text-decoration: none;
 }
 
-/* ========== last section =============* */
+/* ========== 라스트섹션 상단 =============* */
+#info-title {
+  padding: 0 0 16px 0;
+}
+
+.last {
+}
 .last .container {
   display: flex;
+  gap: 24px;
   flex-direction: column;
 }
+
+/* place slide 부분 */
 .place {
 }
-/* place slide 부분 */
 
-/* ----------정보섹션 하단--------------- */
+/* ----------라스트 섹션 하단--------------- */
+
 .information {
   display: grid;
-  gap: 24px;
+  gap: 32px;
   grid-template-columns: repeat(3, 1fr);
 }
 /*공지사항 */
 .information .notice-container {
-  display: grid;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
 }
 .notice-container .notice-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .notice-container .notice-header h2 {
 }
-.notice-container .notice-header a {
+.notice-container .notice-header {
+  display: flex;
+  justify-content: space-between;
 }
-.notice-container .notice-header a i {
+.notice-container .notice-header h2 {
+}
+.notice-container .notice-header .more-btn {
+  display: flex;
+  align-items: center;
+}
+.notice-container .notice-header .fa-plus {
+  font-size: 20px;
 }
 
 .notice-container .notice-table {
-  display: table; /* flex로 되어있다면 다시 table로 설정하거나 제거 */
   width: 100%;
+  display: table; /* flex로 되어있다면 다시 table로 설정하거나 제거 */
   table-layout: fixed; /* 핵심: 셀 너비를 고정하여 내부 텍스트가 삐져나가지 못하게 함 */
   border-collapse: collapse;
 }
 .notice-table td.title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   width: 100%; /* 부모 너비를 다 쓰도록 설정 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .notice-table a {
-  white-space: nowrap;
   overflow: hidden; /* 넘치는 부분 숨김 */
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 /* 북구tv */
 .bukgu-tv-container {
   display: grid;
+  gap: 8px;
 }
 
 .bukgu-tv {
 }
+.bukgu-tv iframe {
+  overflow: hidden;
+  border-radius: 8px;
+}
 
-/* 바로가기 */
-.shortcut-container .shortcut {
-  gap: px;
+/* 바로가기 영역*/
+.shortcut-container {
+  display: grid;
+  gap: 8px;
+}
+.shortcut {
+  display: grid;
+  /* 아이템 사이의 여백 */
+  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  /* 세로로 3개: 콘텐츠 높이에 맞춰 자동으로 3줄 생성 */
+  grid-template-rows: repeat(2, auto);
+}
+.shortcut .shortcut-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.shortcut .shortcut-wrap img {
+  width: 100%;
+  height: 50px;
+  object-fit: contain;
 }
 
 /* 푸터 */
 .footer {
+  width: 100%;
+  margin: 0; /* 혹시 모를 마진 제거 */
+  padding: 40px 0; /* 상하 여백 주어 보기 좋게 조절 */
   background-color: #1f1f1f;
 }
 .footer .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px; /* 좌우 간격 유지 */
+  color: #d7d7d7; /* 푸터 글자색 예시 */
 }
 .footer .logo {
 }

@@ -169,9 +169,22 @@
       </section>
     </div>
 
-    <!-- calendar section -->
+    <!-- calender section -->
     <section class="calender">
       <div class="container">
+        <div class="calender-top">
+          <h2>문화달력</h2>
+          <div class="category-wrap">
+            <div class="box yellow"></div>
+            <p>전시회</p>
+            <div class="box green"></div>
+
+            <p>공연</p>
+            <div class="box blue"></div>
+            <p>축제/행사</p>
+          </div>
+        </div>
+
         <div class="calendar-tabs">
           <button class="tab-btn" data-date="1">1(월)</button>
           <button class="tab-btn" data-date="1">1(월)</button>
@@ -255,16 +268,13 @@
     <!-- last-section -->
     <section class="last">
       <div class="container">
-        <!-- 정보섹션 상단 -->
+        <!-- 라스트  상단 -->
         <div class="place">
+          <h2>재단시설</h2>
           <!-- Swiper -->
-          <div class="swiper mySwiper">
+
+          <div #swiperRef="" class="swiper place-wiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href=""
-                  ><img src="assets/images/gususan-library.png" alt=""
-                /></a>
-              </div>
               <div class="swiper-slide">
                 <a href=""
                   ><img src="assets/images/eoul-center.png" alt=""
@@ -272,27 +282,40 @@
               </div>
               <div class="swiper-slide">
                 <a href=""
+                  ><img src="assets/images/gususan-library.png" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href=""
                   ><img src="assets/images/itaewon-road.png" alt=""
                 /></a>
               </div>
-              <div class="swiper-slide">Slide 4</div>
-              <div class="swiper-slide">Slide 5</div>
-              <div class="swiper-slide">Slide 6</div>
-              <div class="swiper-slide">Slide 7</div>
+              <div class="swiper-slide">
+                <a href=""
+                  ><img src="assets/images/eoul-center.png" alt=""
+                /></a>
+              </div>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
           </div>
+
+          <p class="append-buttons">
+            <button class="prepend-2-slides">Prepend 2 Slides</button>
+            <button class="prepend-slide">Prepend Slide</button>
+            <button class="append-slide">Append Slide</button>
+            <button class="append-2-slides">Append 2 Slides</button>
+          </p>
         </div>
-        <!-- 정보섹션 하단 -->
+        <!-------라스트 섹션 하단 --------->
         <div class="information">
           <div class="notice-container">
-            <div class="notice-header">
+            <div class="notice-header" id="info-title">
               <h2>새소식</h2>
-              <a href="#" class="more-btn"
-                >더보기 <i class="fa-solid fa-plus"></i
-              ></a>
+              <a href="#" class="more-btn">
+                <i class="fa-solid fa-plus"></i>
+              </a>
             </div>
 
             <table class="notice-table">
@@ -348,11 +371,13 @@
             </table>
           </div>
           <div class="bukgu-tv-container">
-            <h2>북구TV</h2>
+            <div id="info-title">
+              <h2>북구TV</h2>
+            </div>
             <div class="bukgu-tv">
               <iframe
                 width="100%"
-                height="217"
+                height="180"
                 src="https://www.youtube.com/embed/76Stwg92BPY?si=q_kOLA4auyWDYYCi"
                 title="YouTube video player"
                 frameborder="0"
@@ -370,42 +395,49 @@
               ></iframe>
             </div>
           </div>
+
+          <!-- 바로가기 영역 -->
           <div class="shortcut-container">
-            <h2>바로가기</h2>
+            <div id="info-title">
+              <h2>바로가기</h2>
+            </div>
             <div class="shortcut">
-              <a href="#"
-                ><img
-                  src="assets/icons/introduce-sc.png"
-                  alt="재단소개"
-                />재단소개</a
-              >
-              <a href="#"
-                ><img
-                  src="assets/icons/rental-sc.png"
-                  alt="대관신청"
-                />대관신청</a
-              >
-
-              <a href="#"><img src="assets/icons/faq-sc.png" alt="FAQ" />FAQ</a>
-
-              <a href="#"
-                ><img src="assets/icons/map-sc.png" alt="오시는 길" />오시는
-                길</a
-              >
-
-              <a href="#"
-                ><img
-                  src="assets/icons/ticket-sc.png"
-                  alt="예매안내"
-                />예매안내</a
-              >
-
-              <a href="#"
-                ><img
-                  src="assets/icons/public-sc.png"
-                  alt="편의시설"
-                />편의시설</a
-              >
+              <div class="shortcut-wrap">
+                <a href="#"
+                  ><img src="assets/icons/introduce-sc.png" alt="재단소개" />
+                  <p>재단소개</p></a
+                >
+              </div>
+              <div class="shortcut-wrap">
+                <a href="#"
+                  ><img src="assets/icons/rental-sc.png" alt="대관신청" />
+                  <p>대관신청</p>
+                </a>
+              </div>
+              <div class="shortcut-wrap">
+                <a href="#"
+                  ><img src="assets/icons/faq-sc.png" alt="FAQ" />
+                  <p>FAQ</p></a
+                >
+              </div>
+              <div class="shortcut-wrap">
+                <a href="#"
+                  ><img src="assets/icons/map-sc.png" alt="오시는 길" />
+                  <p>오시는 길</p></a
+                >
+              </div>
+              <div class="shortcut-wrap">
+                <a href="#"
+                  ><img src="assets/icons/ticket-sc.png" alt="예매안내" />
+                  <p>예매안내</p></a
+                >
+              </div>
+              <div class="shortcut-wrap">
+                <a href="#"
+                  ><img src="assets/icons/public-sc.png" alt="편의시설" />
+                  <p>편의시설</p></a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -414,7 +446,7 @@
 
     <!-- 푸터 영역 -->
     <footer>
-      <section class="footer">
+      <div class="footer">
         <div class="container">
           <div class="logo">
             <a href="index.html"
@@ -452,7 +484,7 @@
             /></a>
           </div>
         </div>
-      </section>
+      </div>
     </footer>
   </body>
 </html>
