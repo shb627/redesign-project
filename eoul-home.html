@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>행복북구문화재단</title>
+
+    <!-- Link Swiper's CSS  라이브러리 먼저 연결해야한다-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/bd66e01c7b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="bg-wrapper">
+      <!-----------------------header start ---------------------------->
+      <!-- 1. 헤더 영역 -->
+      <header class="header">
+        <div class="header-container">
+          <div class="header-content">
+            <!-- logo -->
+            <div class="logo">
+              <a href="index.html"
+                ><img
+                  src="assets/logo/logo_header.png"
+                  alt="행복북구문화재단 헤더 로고"
+              /></a>
+            </div>
+            <!-- 1-1 search box-->
+            <div class="header-center">
+              <div class="search-box">
+                <label for="searchInput" class="sr-only"></label>
+                <span class="search-icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input
+                  type="text"
+                  id="searchInput"
+                  placeholder="문화예술 행사가 궁금하다면?"
+                  autocomplete="off"
+                />
+
+                <div class="search-dropdown">
+                  <div class="search-dropdown-header">
+                    <!-- <span>최근 검색어</span> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- user-menu -->
+            <div class="user-menu">
+              <a href="/login.html">로그인</a>
+              <a href="/signup.html">회원가입</a>
+              <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!------------------ body start ---------------->
+      <!-- hero-section -->
+      <section class="hero-section">
+        <div class="hero-container">
+          <div class="mainmenu" id="eoulcenter">
+            <a href="/">
+              <p>어울아트센터</p>
+              <img
+                src="./assets/images/hero-piano.png"
+                alt="메인메뉴-어울아트센터"
+            /></a>
+          </div>
+          <div class="mainmenu" id="academy">
+            <a href="/">
+              <p>아카데미</p>
+
+              <img
+                src="./assets/images/hero-academy.png"
+                alt="메인메뉴-아카데미"
+            /></a>
+          </div>
+          <!-- hero-image slider -->
+          <div class="hero-carousel">
+            <div class="swiper hero-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./assets/images/hero-poster1.png" alt="포스터1" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./assets/image/hero-poster2.png" alt="포스터1" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./assets/image/hero-poster3.png" alt="포스터1" />
+                  </a>
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <div class="swiper-pagination"></div>
+                <!-- <button class="play">스와이퍼 재생</button>
+                <button class="stop">스와이퍼 정지</button> -->
+              </div>
+            </div>
+          </div>
+          <div class="mainmenu" id="news">
+            <a href="/news.html">
+              <p>어울소식</p>
+
+              <img src="./assets/images/hero-news.png" alt="메인메뉴-어울소식"
+            /></a>
+          </div>
+          <div class="mainmenu" id="library">
+            <a href="">
+              <p>공공도서관</p>
+
+              <img src="./assets/images/hero-library.png" alt="메인메뉴-도서관"
+            /></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- introduce section -->
+      <section class="introduce">
+        <div class="container">
+          <div class="intro-logo">
+            <img src="assets/equal_logo.gif" alt="행복북구문화재단 gif 로고" />
+          </div>
+          <h3>저희 어울아트센터를 찾아주셔서 감사합니다!</h3>
+          <span>
+            1999년 북구문화예술회관으로 시작한 어울아트센터는 북구의 발전 역사와
+            함께 해온 문화의 시작점입니다. 아트센터를 둘러싼 다양한 꽃과
+            나무들은 사계절마다 다른 모습으로 맞이하며, 사이사이 전시된 조각
+            작품과 어우러져 누구에게나 열려있는 조각공원이 됩니다. 이처럼
+            여러분의 어울아트센터는 전문적인 공연, 전시를 비롯해 생활문화예술을
+            경험할 수 있는 작지만 강한 복합문화공간으로 지역의 문화지평을
+            넓혀가고 있습니다.
+          </span>
+          <img
+            src="assets/images/about-eoul-img.png"
+            alt="어울아트센터 이미지"
+          />
+        </div>
+      </section>
+    </div>
+
+    <!-- calendar section -->
+    <section class="calender">
+      <div class="container">
+        <div class="calendar-tabs">
+          <button class="tab-btn" data-date="1">1(월)</button>
+          <button class="tab-btn" data-date="1">1(월)</button>
+          <button class="tab-btn" data-date="1">1(월)</button>
+          <button class="tab-btn" data-date="1">1(월)</button>
+          <button class="tab-btn" data-date="1">1(월)</button>
+          <button class="tab-btn" data-date="1">1(월)</button>
+          <button class="tab-btn" data-date="1">1(월)</button>
+          <button class="tab-btn" data-date="1">1(월)</button>
+          <button class="tab-btn active" data-date="4">4(목)</button>
+        </div>
+
+        <div class="poster-grid">
+          <div class="poster-card" data-category="exhibition">
+            <div class="poster-img-box">
+              <img
+                src="assets/images/calender-poster1.png"
+                alt="Burning News"
+              />
+              <div class="poster-hover">
+                <span class="tag">전시</span>
+                <h4>Burning News</h4>
+                <p>포토그래피</p>
+              </div>
+            </div>
+            <div class="poster-info">
+              <h3>&lt;Burning News&gt;</h3>
+              <p class="subtitle">팀 파치코브 내한 사진전</p>
+              <div class="details">
+                일시 : 1.2(월) ~ 10.8(일) | 장소 : 어울아트센터
+              </div>
+              <a href="예매링크" class="reserve-btn">예매하기</a>
+            </div>
+          </div>
+          <div class="poster-card" data-category="exhibition">
+            <div class="poster-img-box">
+              <img
+                src="assets/images/calender-poster2.png"
+                alt="Burning News"
+              />
+              <div class="poster-hover">
+                <span class="tag">전시</span>
+                <h4>Burning News</h4>
+                <p>포토그래피</p>
+              </div>
+            </div>
+            <div class="poster-info">
+              <h3>&lt;Burning News&gt;</h3>
+              <p class="subtitle">2026 &lt;카스틸리노이&gt; 전시회</p>
+              <div class="details">
+                일시 : 1.2(월) ~ 10.8(일) | 장소 : 어울아트센터
+              </div>
+              <a href="예매링크" class="reserve-btn">예매하기</a>
+            </div>
+          </div>
+          <div class="poster-card" data-category="exhibition">
+            <div class="poster-img-box">
+              <img
+                src="assets/images/calender-poster3.png"
+                alt="Burning News"
+              />
+              <div class="poster-hover">
+                <span class="tag">전시</span>
+                <h4>Burning News</h4>
+                <p>포토그래피</p>
+              </div>
+            </div>
+            <div class="poster-info">
+              <h3>&lt;Burning News&gt;</h3>
+              <p class="subtitle">'설'레는 상상가득한 '福'</p>
+              <div class="details">
+                일시 : 1.2(월) ~ 10.8(일) | 장소 : 어울아트센터
+              </div>
+              <a href="예매링크" class="reserve-btn">예매하기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- last-section -->
+    <section class="last">
+      <div class="container">
+        <!-- 정보섹션 상단 -->
+        <div class="place">
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href=""
+                  ><img src="assets/images/gususan-library.png" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href=""
+                  ><img src="assets/images/eoul-center.png" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href=""
+                  ><img src="assets/images/itaewon-road.png" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">Slide 4</div>
+              <div class="swiper-slide">Slide 5</div>
+              <div class="swiper-slide">Slide 6</div>
+              <div class="swiper-slide">Slide 7</div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <!-- 정보섹션 하단 -->
+        <div class="information">
+          <div class="notice-container">
+            <div class="notice-header">
+              <h2>새소식</h2>
+              <a href="#" class="more-btn"
+                >더보기 <i class="fa-solid fa-plus"></i
+              ></a>
+            </div>
+
+            <table class="notice-table">
+              <tbody>
+                <tr>
+                  <td class="title">
+                    <a href="#"
+                      >2026년 행복북구문화재단 행복어린이뮤지컬합창단 추가단원
+                      실기전형(오디션) …</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title">
+                    <a href="#"
+                      >행복북구문화재단 어울스포츠센터 체육강좌 강사 모집
+                      재공고</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title">
+                    <a href="#"
+                      >2026년 행복북구문화재단 문화사업본부 2026
+                      「청문당」초단시간 기간제 근로…</a
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="title">
+                    <a href="#"
+                      >2026년 상반기 어울아트센터 수시대관 심사 결과 발표</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title">
+                    <a href="#"
+                      >2025년 제2차(재)행복북구문화재단 직원 채용 최종합격자
+                      공고</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title">
+                    <a href="#"
+                      >하반기 정기 행정조직 개편에 따른 행정 서비스 안내</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="bukgu-tv-container">
+            <h2>북구TV</h2>
+            <div class="bukgu-tv">
+              <iframe
+                width="100%"
+                height="217"
+                src="https://www.youtube.com/embed/76Stwg92BPY?si=q_kOLA4auyWDYYCi"
+                title="YouTube video player"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="shortcut-container">
+            <h2>바로가기</h2>
+            <div class="shortcut">
+              <a href="#"
+                ><img
+                  src="assets/icons/introduce-sc.png"
+                  alt="재단소개"
+                />재단소개</a
+              >
+              <a href="#"
+                ><img
+                  src="assets/icons/rental-sc.png"
+                  alt="대관신청"
+                />대관신청</a
+              >
+
+              <a href="#"><img src="assets/icons/faq-sc.png" alt="FAQ" />FAQ</a>
+
+              <a href="#"
+                ><img src="assets/icons/map-sc.png" alt="오시는 길" />오시는
+                길</a
+              >
+
+              <a href="#"
+                ><img
+                  src="assets/icons/ticket-sc.png"
+                  alt="예매안내"
+                />예매안내</a
+              >
+
+              <a href="#"
+                ><img
+                  src="assets/icons/public-sc.png"
+                  alt="편의시설"
+                />편의시설</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 푸터 영역 -->
+    <footer>
+      <section class="footer">
+        <div class="container">
+          <div class="logo">
+            <a href="index.html"
+              ><img
+                src="assets/logo/logo_header.png"
+                alt="행복북구문화재단 헤더 로고"
+            /></a>
+          </div>
+          <div class="info">
+            <div class="info-top">
+              <p>
+                41447 대구광역시 북구 구암로 47(관음동) 어울아트센터 전화
+                053&rpar; 320-5120 Email hyeonbin@hbcf.or.kr 사업자번호
+                534-82-00168(대표자 홍길동) 팩스 053&rpar;327-1553
+              </p>
+            </div>
+            <div class="info-bottom">
+              <a href=""><p>개인정보처리방침</p></a>
+              <a href=""><span>이메일주소무단수집거부</span></a>
+              <a href=""><span>국민권익위원회</span></a>
+            </div>
+          </div>
+          <div class="sns">
+            <a href="https://www.facebook.com/happybukgu/?locale=ko_KR"
+              ><img src="./assets/logo/facebook-logo.png" alt=""
+            /></a>
+            <a href="https://www.instagram.com/happy_bukgu/"
+              ><img src="./assets/logo/insta-logo.png" alt=""
+            /></a>
+            <a href="https://www.youtube.com/@happy_bukgu"
+              ><img src="./assets/logo/youtube.png" alt=""
+            /></a>
+            <a href="https://blog.naver.com/bukguarts"
+              ><img src="./assets/logo/blog.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

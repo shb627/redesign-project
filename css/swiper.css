@@ -1,0 +1,34 @@
+.hero-carousel {
+  position: relative;
+  flex: 1; /* 남는 공간을 차지하게 함 */
+  max-width: 400px; /* 이미지 포스터 크기에 맞게 고정하거나 비율 조정 */
+  height: auto; /* 양옆 메뉴 높이와 통일 */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.hero-swiper {
+  width: 100%;
+  height: 100%;
+}
+.hero-swiper .swiper-wrapper {
+}
+
+.hero-swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.hero-swiper .swiper-slide a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* 그래야 너비 높이 정할수 있음 */
+  display: block;
+}
+.hero-swiper .swiper-slide a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 슬라이드 조절 버튼 */
