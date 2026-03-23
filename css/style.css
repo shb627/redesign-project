@@ -40,7 +40,7 @@ section {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 20p 0;
+  padding: 20px 0;
 }
 
 /* layout */
@@ -49,7 +49,7 @@ section {
   max-width: 1280px;
   margin: 0 auto;
   padding: 40px 40px;
-  border-bottom: 1px solid #9e9e9e;
+  border-bottom: 3px solid #9e9e9e;
 }
 
 .bg-wrapper {
@@ -70,9 +70,10 @@ section {
   backdrop-filter: blur(50px);
 }
 .header-container {
-  margin: 0 auto;
   width: 100%;
-  padding: 20px 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 40px;
 }
 .header-content {
   display: grid;
@@ -194,7 +195,10 @@ section {
 /* ---------------- body start -----------------*/
 /* hero-section */
 .hero-section {
+  padding: 0, 0, 20px, 0;
   width: 100%;
+
+  margin: 0 auto;
   max-width: 1280px;
   display: flex;
   align-items: center;
@@ -416,24 +420,20 @@ section {
 /* 1. 이미지가 머물 수 있도록 부모의 높이를 설정합니다. */
 .full-width-image {
   position: sticky;
-  top: 0; /* 화면 맨 위에서부터 고정 시작 */
+  top: 500px; /* 헤더 높이 고려 */
   width: 100%;
-  height: 100vh; /* 화면을 가득 채움 */
+  height: 100vh; /* 화면 높이만큼 유지 */
   overflow: hidden;
-  z-index: 1; /* 글자보다 뒤에 위치 */
+  z-index: 1;
 }
 
 /* 2. 이미지는 부모 안에서 화면 상단(또는 특정 지점)에 고정됩니다. */
 .full-width-image img {
-  position: sticky;
-  top: 100px; /* 화면 상단에서 100px 지점에 고정 (헤더 높이 고려) */
   display: block;
   width: 100%;
   height: auto;
-  z-index: 100;
-
-  /* 이미지가 부드럽게 보이도록 추가하는 옵션 */
   object-fit: cover;
+  border-bottom: 1px solid #fff;
 }
 
 /* ========== calender section =============* */
@@ -442,6 +442,7 @@ section {
 .calender .calender-top {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 24px;
 }
 .calender .calender-top h2 {
 }
@@ -452,26 +453,53 @@ section {
   gap: 4px;
 }
 
-.box .yellow {
+.box.yellow {
   width: 16px;
   height: 16px;
   background-color: #f1c40f;
   border-radius: 4px;
 }
-.box .green {
+.box.green {
   width: 16px;
   height: 16px;
   background-color: #1d9507;
   border-radius: 4px;
 }
-.calender-tabs {
+.box.blue {
+  width: 16px;
+  height: 16px;
+  background-color: #0078cd;
+  border-radius: 4px;
+}
+
+.calender .container .calender-tabs {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  gap: 600px;
+}
+#sat {
+  color: rgb(29, 119, 255);
+}
+#sun {
+  color: #ff2e37;
 }
 .calender-tabs .tab-btn {
-  padding: 0 40px;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 16px 0;
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 0px;
+}
+.calender-tabs .tab-btn:hover {
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-left: 0px solid #333;
+  border-right: 0px solid #333;
 }
 
 /* calender swiper */
@@ -480,8 +508,9 @@ section {
   height: 100%;
   gap: 0;
 }
+
 .calender-swiper .swiper-slide {
-  width: auto;
+  width: 100%;
   height: auto; /* 내용물에 따라 높이 가변 */
   display: flex;
 }
@@ -577,24 +606,27 @@ section {
 
 /* place slide 부분 */
 .placecarousel {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 16px;
 }
 .place-swiper {
+  position: relative;
   display: flex;
+  justify-content: space-between;
+  gap: 0;
   width: 100%;
   max-width: 1200px; /* 메인 컨텐츠 너비에 맞춤 */
   height: 250px;
   margin: 0 auto;
   position: relative;
+  border-radius: 16px;
   overflow: hidden; /* 슬라이드 밖으로 나가는 이미지 숨김 */
 }
 .swiper-wrapper {
+  display: flex;
 }
 
 /* 슬라이드 1개의 너비를 Swiper가 계산할 수 있게 설정 */
 .place-swiper .swiper-slide {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -607,10 +639,16 @@ section {
   object-fit: cover; /* 이미지가 찌그러지지 않게 */
   display: block;
 }
+
 .place-swiper .swiper-button-next,
 .place-swiper .swiper-button-prev {
-  display: flex;
-  align-items: center;
+  position: absolute;
+  top: 20px;
+  width: 60px; /* 좌우 검정 영역 두께 */
+  height: 100%; /* 슬라이더 높이 꽉 채움 */
+  background-color: rgba(0, 0, 0, 0.6); /* 반투명 검정 */
+  z-index: 10;
+  transform: none; /* 기존 중앙 정렬 제거 */
 }
 
 /* ----------라스트 섹션 하단--------------- */

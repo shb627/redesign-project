@@ -88,7 +88,7 @@
 
       <!------------------ body start ---------------->
       <!-- hero-section -->
-      <section class="hero-section">
+      <div class="hero-section">
         <div class="hero-container">
           <div class="mainmenu" id="eoulCenter">
             <a href="/">
@@ -147,13 +147,13 @@
             /></a>
           </div>
         </div>
-      </section>
+      </div>
 
       <!-- introduce section -->
       <div class="introduce">
         <div class="full-width-image">
           <img
-            src="assets/images/about-eoul-img.png"
+            src="assets/images/about-eoul-img2.png"
             alt="어울아트센터 이미지"
           />
         </div>
@@ -195,14 +195,14 @@
           </div>
         </div>
 
-        <div class="calendar-tabs">
+        <div class="calender-tabs">
           <button class="tab-btn" data-date="1">1(월)</button>
           <button class="tab-btn" data-date="2">2(화)</button>
           <button class="tab-btn" data-date="3">3(수)</button>
           <button class="tab-btn" data-date="4">4(목)</button>
           <button class="tab-btn" data-date="5">5(금)</button>
-          <button class="tab-btn" data-date="6">6(토)</button>
-          <button class="tab-btn" data-date="7">7(일)</button>
+          <button class="tab-btn" data-date="6" id="sat">6(토)</button>
+          <button class="tab-btn" data-date="7" id="sun">7(일)</button>
           <button class="tab-btn" data-date="8">8(월)</button>
           <button class="tab-btn active" data-date="9">4(화)</button>
         </div>
@@ -233,7 +233,7 @@
                     <div class="details">
                       일시 : 1.4(목) ~ 10.6(토) | 장소 : 어울아트센터
                     </div>
-                    <a href="#" class="reserve-btn">예매하기</a>
+                    <a href="reserve-page.html" class="reserve-btn">예매하기</a>
                   </div>
                 </div>
               </div>
@@ -259,7 +259,7 @@
                     <div class="details">
                       일시 : 1.2(화) ~ 10.4(목) | 장소 : 어울아트센터
                     </div>
-                    <a href="#" class="reserve-btn">예매하기</a>
+                    <a href="reserve-page.html" class="reserve-btn">예매하기</a>
                   </div>
                 </div>
               </div>
@@ -280,7 +280,70 @@
                     <div class="details">
                       일시 : 1.4(목) ~ 10.6(토) | 장소 : 어울아트센터
                     </div>
-                    <a href="#" class="reserve-btn">예매하기</a>
+                    <a href="reserve-page.html" class="reserve-btn">예매하기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="poster-card" data-category="festival" data-date="4">
+                  <div class="poster-img-box">
+                    <img
+                      src="assets/images/calender-poster4.jpg"
+                      alt="설레는상상"
+                    />
+                    <div class="poster-hover">
+                      <span class="tag">행사</span>
+                      <h3>Burning News</h3>
+                    </div>
+                  </div>
+                  <div class="poster-info">
+                    <h3>&lt; '설'레는 상상가득한 '福' &gt;</h3>
+                    <div class="details">
+                      일시 : 1.4(목) ~ 10.6(토) | 장소 : 어울아트센터
+                    </div>
+                    <a href="reserve-page.html" class="reserve-btn">예매하기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="poster-card" data-category="festival" data-date="4">
+                  <div class="poster-img-box">
+                    <img
+                      src="assets/images/calender-poster5.jpg"
+                      alt="설레는상상"
+                    />
+                    <div class="poster-hover">
+                      <span class="tag">행사</span>
+                      <h3>Burning News</h3>
+                    </div>
+                  </div>
+                  <div class="poster-info">
+                    <h3>&lt; '설'레는 상상가득한 '福' &gt;</h3>
+                    <div class="details">
+                      일시 : 1.4(목) ~ 10.6(토) | 장소 : 어울아트센터
+                    </div>
+                    <a href="reserve-page.html" class="reserve-btn">예매하기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="poster-card" data-category="festival" data-date="4">
+                  <div class="poster-img-box">
+                    <img
+                      src="assets/images/calender-poster6.jpg"
+                      alt="설레는상상"
+                    />
+                    <div class="poster-hover">
+                      <span class="tag">행사</span>
+                      <h3>Burning News</h3>
+                    </div>
+                  </div>
+                  <div class="poster-info">
+                    <h3>&lt; '설'레는 상상가득한 '福' &gt;</h3>
+                    <div class="details">
+                      일시 : 1.4(목) ~ 10.6(토) | 장소 : 어울아트센터
+                    </div>
+                    <a href="reserve-page.html" class="reserve-btn">예매하기</a>
                   </div>
                 </div>
               </div>
@@ -300,39 +363,36 @@
         <div class="place">
           <h2 id="info-title">재단시설</h2>
           <!-- Swiper -->
-          <div class="placecarousel">
-            <div class="swiper place-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <a href="lib-gususan.html"
-                    ><img src="assets/images/place-img-1.png" alt="이미지 1"
-                  /></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="#"
-                    ><img src="assets/images/place-img-2.png" alt="이미지 2"
-                  /></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="#"
-                    ><img src="assets/images/place-img-3.png" alt="이미지 3"
-                  /></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="#"
-                    ><img src="assets/images/place-img-4.jpg" alt="이미지 4"
-                  /></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="#"
-                    ><img src="assets/images/place-img-5.jpg" alt="이미지 4"
-                  /></a>
-                </div>
+          <div class="swiper place-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="lib-gususan.html"
+                  ><img src="assets/images/place-img-1.png" alt="이미지 1"
+                /></a>
               </div>
-
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="assets/images/place-img-2.png" alt="이미지 2"
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="assets/images/place-img-3.png" alt="이미지 3"
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="assets/images/place-img-4.jpg" alt="이미지 4"
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="assets/images/place-img-5.jpg" alt="이미지 4"
+                /></a>
+              </div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
         <!-------라스트 섹션 하단 --------->

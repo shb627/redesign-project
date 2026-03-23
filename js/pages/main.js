@@ -114,7 +114,7 @@ export function initCalenderCarousel() {
 
 const swiper3 = new Swiper(".calender-swiper", {
   slidesPerView: 4, // 한 번에 보여줄 슬라이드 개수
-  spaceBetween: 4, // 슬라이드 사이의 간격 (px)
+  spaceBetween: 20, // 슬라이드 사이의 간격 (px)
   loop: true, // 무한 반복 여부 (선택사항)
 
   // 네비게이션 버튼 설정
@@ -126,7 +126,7 @@ const swiper3 = new Swiper(".calender-swiper", {
   // 반응형 설정 (선택사항: 모바일에서는 1개만 보이게 하고 싶을 때)
   breakpoints: {
     320: { slidesPerView: 1 },
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
+    768: { slidesPerView: 3 },
+    1024: { slidesPerView: 4 },
   },
 });
