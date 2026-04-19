@@ -1,4 +1,28 @@
 // js/main.js
+
+// dropdown
+export function dropDown() {
+  const searchBox = document.querySelector("#searchBox");
+  const searchInput = document.querySelector("#searchInput");
+  const searchDropdown = document.querySelector("#searchDropdown");
+
+  // input 클릭하면 dropdown 열기
+  searchInput.addEventListener("click", () => {
+    searchDropdown.classList.add("show");
+  });
+
+  // 바깥 클릭하면 dropdown 닫기
+  document.addEventListener("click", (e) => {
+    if (!searchBox.contains(e.target)) {
+      searchDropdown.classList.remove("show");
+    }
+  });
+}
+
+export function menuDropDown() {
+  
+}
+
 export function initHeroCarousel() {
   // Swiper가 정의되었는지 확인 후 실행
   if (typeof Swiper !== "undefined") {
@@ -7,7 +31,9 @@ export function initHeroCarousel() {
       autoplay: {
         delay: 4000,
         disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       },
+      spaceBetween: 0,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -18,31 +44,6 @@ export function initHeroCarousel() {
     console.error("Swiper is not defined. Check your CDN link.");
   }
 }
-
-// Swiper 초기화
-const swiper1 = new Swiper(".hero-swiper", {
-  // 슬라이드 사이 간격
-  loop: true, // 무한 루프 (재생이 멈추지 않게 하려면 권장)
-  spaceBetween: 0,
-
-  // 슬라이드 중앙 배치
-  centeredSlides: true,
-
-  // 자동 재생 설정
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false, // 유저가 건드려도 계속 재생
-  },
-
-  // 하단 페이지네이션(점) 설정
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-  // 양옆 버튼은 사용하지 않으므로 navigation 옵션은 삭제했습니다.
-});
-
 // placecarousel
 export function initPlaceCarousel() {
   // Swiper가 정의되었는지 확인 후 실행
@@ -113,20 +114,20 @@ export function initCalenderCarousel() {
 }
 
 const swiper3 = new Swiper(".calender-swiper", {
-  slidesPerView: 4, // 한 번에 보여줄 슬라이드 개수
-  spaceBetween: 20, // 슬라이드 사이의 간격 (px)
+  slidesPerView: 5, // 한 번에 보여줄 슬라이드 개수
+  spaceBetween: 16, // 슬라이드 사이의 간격 (px)
   loop: true, // 무한 반복 여부 (선택사항)
 
   // 네비게이션 버튼 설정
   navigation: {
-    nextEl: ".calender-carousel .swiper-button-next",
-    prevEl: ".calender-carousel .swiper-button-prev",
+    nextEl: ".calender-carousel .swiper-calender-next",
+    prevEl: ".calender-carousel .swiper-calender-prev",
   },
 
   // 반응형 설정 (선택사항: 모바일에서는 1개만 보이게 하고 싶을 때)
   breakpoints: {
     320: { slidesPerView: 1 },
     768: { slidesPerView: 3 },
-    1024: { slidesPerView: 4 },
+    1024: { slidesPerView: 5 },
   },
 });

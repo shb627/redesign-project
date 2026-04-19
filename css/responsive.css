@@ -1,0 +1,5 @@
+@media screen and(max-width:1023px) {
+  .hero-section .hero-container {
+    padding: 24px 60px;
+  }
+}
