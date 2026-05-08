@@ -1,4 +1,28 @@
-// js/main.js
+const mbMenuBtn = document.querySelector(".mb-menu-btn");
+const mbCloseBtn = document.querySelector(".mb-close-btn");
+const mbMenuList = document.querySelector(".mb-menu-list");
+
+if (mbMenuBtn && mbCloseBtn && mbMenuList) {
+  // 초기 상태 설정
+  mbCloseBtn.style.display = "none";
+  mbMenuList.style.display = "none";
+
+  // 햄버거 버튼 클릭 → 메뉴 열기
+  mbMenuBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    mbMenuBtn.style.display = "none";
+    mbCloseBtn.style.display = "block";
+    mbMenuList.style.display = "flex";
+  });
+
+  // X 버튼 클릭 → 메뉴 닫기
+  mbCloseBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    mbMenuBtn.style.display = "block";
+    mbCloseBtn.style.display = "none";
+    mbMenuList.style.display = "none";
+  });
+}
 
 // dropdown
 export function dropDown() {
@@ -19,9 +43,7 @@ export function dropDown() {
   });
 }
 
-export function menuDropDown() {
-  
-}
+export function menuDropDown() {}
 
 export function initHeroCarousel() {
   // Swiper가 정의되었는지 확인 후 실행
@@ -120,8 +142,8 @@ const swiper3 = new Swiper(".calender-swiper", {
 
   // 네비게이션 버튼 설정
   navigation: {
-    nextEl: ".calender-carousel .swiper-calender-next",
-    prevEl: ".calender-carousel .swiper-calender-prev",
+    nextEl: ".calender-carousel .swiper-nav-next",
+    prevEl: ".calender-carousel .swiper-nav-prev",
   },
 
   // 반응형 설정 (선택사항: 모바일에서는 1개만 보이게 하고 싶을 때)

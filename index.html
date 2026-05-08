@@ -21,9 +21,9 @@
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
 
     <script src="js/script.js" defer></script>
     <script src="js/pages/main.js"></script>
@@ -116,7 +116,28 @@
           >
           <a href="/login.html"><span class="header-login">로그인</span></a>
           <a href="/signup.html"><span class="header-signup">회원가입</span></a>
-          <div class="menu-wrap">
+
+          <nav class="nav">
+            <!-- mobile menu -->
+            <div class="mb-menu-wrap">
+              <div class="mb-btn">
+                <a href="#" class="mb-menu-btn">
+                  <i class="fa-solid fa-x"></i>
+                </a>
+                <a href="#" class="mb-close-btn">
+                  <i class="fa-solid fa-bars"></i>
+                </a>
+              </div>
+              <ul class="mb-menu-list">
+                <li><a href="#home">홈</a></li>
+                <li><a href="#skill">기술</a></li>
+                <li><a href="#project">프로젝트</a></li>
+                <li><a href="#contact">연락하기</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <!-- <div class="menu-wrap">
             <a href="">
               <button class="hamburger" id="hamburger">
                 <span></span>
@@ -124,15 +145,15 @@
                 <span></span>
               </button>
             </a>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
 
     <!------------------ body start ---------------->
     <!-- hero-section -->
-    <div class="bg-wrapper">
-      <section class="hero-section">
+    <section class="hero-section">
+      <div class="container">
         <div class="hero-container">
           <div class="mainmenu" id="eoulCenter">
             <a href="/">
@@ -194,37 +215,38 @@
             /></a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- introduce section -->
-      <section class="introduce">
-        <img
-          src="assets/images/about-eoul-img2.png"
-          alt="어울아트센터 이미지"
-        />
-        <img class="back-tree" src="assets/images/Layer 3.png" alt="" />
-        <div class="container">
-          <div class="intro-text">
-            <div class="intro-logo">
-              <img
-                src="assets/equal_logo.gif"
-                alt="행복북구문화재단 gif 로고"
-              />
-            </div>
-            <h3>저희 어울아트센터를 찾아주셔서 감사합니다!</h3>
-            <span>
-              1999년 북구문화예술회관으로 시작한 어울아트센터는 북구의 발전
-              역사와 함께 해온 문화의 시작점입니다. 아트센터를 둘러싼 다양한
-              꽃과 나무들은 사계절마다 다른 모습으로 맞이하며, 사이사이 전시된
-              조각 작품과 어우러져 누구에게나 열려있는 조각공원이 됩니다. 이처럼
-              여러분의 어울아트센터는 전문적인 공연, 전시를 비롯해
-              생활문화예술을 경험할 수 있는 작지만 강한 복합문화공간으로 지역의
-              문화지평을 넓혀가고 있습니다.
-            </span>
+    <!-- introduce section -->
+    <section class="introduce">
+      <div class="intro-container">
+        <div class="intro-container-left">
+          <div class="about-eoul-img">
+            <img
+              src="assets/images/about-eoul-img2.png"
+              alt="어울아트센터 이미지"
+            />
           </div>
         </div>
-      </section>
-    </div>
+
+        <div class="intro-container-right">
+          <div class="intro-logo">
+            <img src="assets/equal_logo.gif" alt="행복북구문화재단 gif 로고" />
+          </div>
+          <h3>저희 어울아트센터를 찾아주셔서 감사합니다!</h3>
+          <span>
+            1999년 북구문화예술회관으로 시작한 어울아트센터는 북구의 발전 역사와
+            함께 해온 문화의 시작점입니다. 아트센터를 둘러싼 다양한 꽃과
+            나무들은 사계절마다 다른 모습으로 맞이하며, 사이사이 전시된 조각
+            작품과 어우러져 누구에게나 열려있는 조각공원이 됩니다. 이처럼
+            여러분의 어울아트센터는 전문적인 공연, 전시를 비롯해 생활문화예술을
+            경험할 수 있는 작지만 강한 복합문화공간으로 지역의 문화지평을
+            넓혀가고 있습니다.
+          </span>
+        </div>
+      </div>
+    </section>
 
     <!-- calender section -->
     <section class="calender">
@@ -319,8 +341,8 @@
                       alt="설레는상상"
                     />
                     <div class="poster-hover">
-                      <span class="tag">행사</span>
-                      <h3>Burning News</h3>
+                      <span class="tag">축제/행사</span>
+                      <h3>'설'레는 상상가득한 '福'</h3>
                     </div>
                   </div>
                   <div class="poster-info">
@@ -333,19 +355,23 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="poster-card" data-category="festival" data-date="4">
+                <div
+                  class="poster-card"
+                  data-category="exhibition"
+                  data-date="4"
+                >
                   <div class="poster-img-box">
                     <img
                       src="assets/images/calender-poster4.jpg"
                       alt="설레는상상"
                     />
                     <div class="poster-hover">
-                      <span class="tag">행사</span>
-                      <h3>Burning News</h3>
+                      <span class="tag">전시회</span>
+                      <h3>설계된 도시 풍경</h3>
                     </div>
                   </div>
                   <div class="poster-info">
-                    <h3>'설'레는 상상가득한 '福'</h3>
+                    <h3>설계된 도시 풍경</h3>
                     <div class="details">일시 : 1.4(목) ~ 10.6(토)</div>
                     <span>장소 : 어울아트센터</span>
 
@@ -354,19 +380,19 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="poster-card" data-category="festival" data-date="4">
+                <div class="poster-card" data-category="show" data-date="4">
                   <div class="poster-img-box">
                     <img
                       src="assets/images/calender-poster5.jpg"
                       alt="설레는상상"
                     />
                     <div class="poster-hover">
-                      <span class="tag">행사</span>
-                      <h3>Burning News</h3>
+                      <span class="tag">공연</span>
+                      <h3>소리 산책</h3>
                     </div>
                   </div>
                   <div class="poster-info">
-                    <h3>'설'레는 상상가득한 '福'</h3>
+                    <h3>소리 산책</h3>
                     <div class="details">일시 : 1.4(목) ~ 10.6(토)</div>
                     <span>장소 : 어울아트센터</span>
 
@@ -375,19 +401,19 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="poster-card" data-category="festival" data-date="4">
+                <div class="poster-card" data-category="show" data-date="4">
                   <div class="poster-img-box">
                     <img
                       src="assets/images/calender-poster6.jpg"
                       alt="설레는상상"
                     />
                     <div class="poster-hover">
-                      <span class="tag">행사</span>
-                      <h3>Burning News</h3>
+                      <span class="tag">공연</span>
+                      <h3>선녀와 나무꾼 숨겨진 비밀</h3>
                     </div>
                   </div>
                   <div class="poster-info">
-                    <h3>'설'레는 상상가득한 '福'</h3>
+                    <h3>선녀와 나무꾼 숨겨진 비밀</h3>
                     <div class="details">일시 : 1.4(목) ~ 10.6(토)</div>
                     <span>장소 : 어울아트센터</span>
 
@@ -397,13 +423,26 @@
               </div>
             </div>
             <!-- 다음 이전 버튼 -->
-            <div class="swiper-calender-next">
+
+            <!-- <div class="swiper-calender-next">
               <i class="fa-solid fa-chevron-right"></i>
             </div>
             <div class="swiper-calender-prev">
               <i class="fa-solid fa-chevron-left"></i>
-            </div>
+            </div> -->
           </div>
+          <button
+            class="swiper-nav-btn swiper-nav-prev popular-prev"
+            aria-label="이전"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button
+            class="swiper-nav-btn swiper-nav-next popular-next"
+            aria-label="다음"
+          >
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
         </div>
       </div>
     </section>
