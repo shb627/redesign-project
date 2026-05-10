@@ -71,6 +71,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
   padding: 0 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   z-index: 100;
@@ -394,9 +395,9 @@ section {
 .mainmenu {
   position: relative;
   width: 20%;
-  flex: 1; /* 4개 메뉴 균등 분배 */
   min-width: 0;
   height: 500px;
+  flex: 1; /* 4개 메뉴 균등 분배 */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
@@ -522,12 +523,11 @@ section {
 /* 히어로 스와이퍼 */
 
 .hero-carousel {
-  flex: 2; /* hero는 mainmenu의 2배 너비 */
-  min-width: 0;
-  max-width: none;
-
   position: relative;
   width: 100%;
+  min-width: 0;
+  max-width: none;
+  flex: 2; /* hero는 mainmenu의 2배 너비 */
   /* min-width: 200px;
   max-width: 400px;
   flex: 1; */
@@ -582,32 +582,39 @@ section {
 /* ========== introduce section =============*/
 .introduce {
   position: relative;
-  width: 100%;
+  /* width: 100%;
   height: 100vh;
   display: flex;
-  /* background-color: (90deg, red, #6aa6d1); */
   align-items: center;
   justify-content: center;
-  /* overflow: hidden;  */
   z-index: -1;
-  background-color: #eeeeee;
+  background-color: #eeeeee; */
 }
+
 .intro-container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  /* flex: 2; */
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  padding: 0 40px;
+  overflow: visible;
 }
-.intro-container-left {
-}
-.intro-container-right {
+
+.intro-container {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  gap: 12px;
 }
 .intro-logo {
+  position: relative;
   width: 250px;
   height: auto;
   display: flex;
@@ -629,18 +636,57 @@ section {
 }
 
 .about-eoul-img {
-}
-.about-eoul-img img {
-  position: absolute;
-  bottom: 0;
-  left: -100px;
+  display: flex;
+  justify-content: center;
+  position: relative;
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: center;
+}
+.about-eoul-img img {
+  position: relative;
+  width: 150vw;
   z-index: -1;
+  inset: 0;
+  left: 60%;
+  transform: translateX(-50%);
   object-fit: cover;
-  /* filter: drop-shadow(0 -2px 10px rgba(11, 51, 143, 0.5)); */
+}
+
+.eoul-band-container {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+  position: relative;
+}
+
+.eoul-band-track {
+  width: max-content;
+
+  gap: 170px;
+  display: flex;
+  align-items: center;
+
+  animation: bandFlow 15s linear infinite;
+}
+
+.eoul-band-track img {
+  width: 100vw;
+  flex-shrink: 0;
+
+  object-fit: cover;
+}
+
+/* 반복 흐름 */
+@keyframes bandFlow {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* ========== calender section =============* */
@@ -651,17 +697,11 @@ section {
   display: flex;
   justify-content: space-between;
   padding-bottom: 8px;
-  /* border-bottom: 8px solid #000000; */
 }
-.calender-top h2::after {
-  content: "";
-  width: 1000px; /* 라인 길이 */
-  height: 5px;
-  display: inline-block;
-  margin-left: 12px;
-  background-color: #2d2d2d;
-}
+
 .calender .calender-top h2 {
+  font-size: 40px;
+  line-height: 1;
 }
 .calender-bottom {
   display: flex;
@@ -698,6 +738,9 @@ section {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 12px;
+  border-top: 3px solid #000;
+  border-bottom: 1px solid #000;
 }
 #sat {
   color: rgb(29, 119, 255);
@@ -736,15 +779,15 @@ section {
   position: relative;
 }
 .calender-swiper .swiper-wrapper {
-  height: auto;
   position: relative;
   width: 100%;
+  height: auto;
 }
 .calender-swiper .swiper-slide {
   position: relative;
-  height: auto;
 
   width: 100%;
+  height: auto;
   display: flex;
 }
 
@@ -861,29 +904,29 @@ section {
 .swiper-calender-prev {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%); /* 세로 중앙 */
   width: 72px;
   height: 72px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border-radius: 50%;
-  background-color: #ededed;
   box-shadow:
     0 10px 15px -3px rgb(0 0 0 / 0.1),
     0 4px 6px -4px rgb(0 0 0 / 0.1);
 
   z-index: 10;
+  background-color: #ededed;
   cursor: pointer;
+  transform: translateY(-50%); /* 세로 중앙 */
+
+  border-radius: 50%;
 }
 
 .swiper-calender-next:hover,
 .swiper-calender-prev:hover {
-  transform: translateY(-50%) scale(1.1);
   background-color: #000;
   color: #fff;
+  transform: translateY(-50%) scale(1.1);
 }
 
 /* 오른쪽 버튼 */
@@ -908,51 +951,118 @@ section {
 .last {
 }
 .last .container {
-  padding-top: 20px;
-  display: flex;
   gap: 12px;
   flex-direction: column;
+  padding-top: 20px;
 }
 .place h2 {
   color: #fff;
 }
 
 /* place slide 부분 */
+/* place slide 부분 */
 .placecarousel {
+  width: 100%;
+  padding-bottom: 24px;
 }
+
+/* swiper */
 .place-swiper {
   position: relative;
   width: 100%;
-  max-width: 1440px; /* 메인 컨텐츠 너비에 맞춤 */
-  height: 250px;
+  height: auto;
+
   display: flex;
-  gap: 0;
-  justify-content: space-between;
   margin: 0 auto;
-  border: 1px solid #ffff;
-  overflow: hidden; /* 슬라이드 밖으로 나가는 이미지 숨김 */
+  border: 1px solid #fff;
+
+  overflow: hidden;
   border-radius: 16px;
 }
-.swiper-wrapper {
-  position: relative;
+
+/* wrapper */
+.place-swiper .swiper-wrapper {
+  width: 100%;
+  height: auto;
+
   display: flex;
 }
 
-/* 슬라이드 1개의 너비를 Swiper가 계산할 수 있게 설정 */
+/* slide */
 .place-swiper .swiper-slide {
   position: relative;
-  width: auto; /* 중요: Swiper가 직접 계산하게 둠 */
-  height: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  flex-shrink: 0;
 }
 
-.place-swiper .swiper-slide img {
+/* 링크 */
+.place-swiper .swiper-slide a {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover; /* 이미지가 찌그러지지 않게 */
+}
+
+/* 이미지 */
+.place-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+}
+
+/* 공통 버튼 */
+.place-swiper .swiper-button-next,
+.place-swiper .swiper-button-prev {
+  position: absolute;
+  top: 0;
+
+  width: 40px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 0;
+  z-index: 10;
+
+  background-color: rgba(0, 0, 0, 0.7);
+
+  transition: 0.3s;
+}
+
+/* hover */
+.place-swiper .swiper-button-next:hover,
+.place-swiper .swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* prev 위치 */
+.place-swiper .swiper-button-prev {
+  left: 0;
+}
+
+/* next 위치 */
+.place-swiper .swiper-button-next {
+  right: 0;
+}
+
+/* 기본 swiper 화살표 제거 */
+.place-swiper .swiper-button-next::after,
+.place-swiper .swiper-button-prev::after {
+  display: none;
+}
+
+/* Font Awesome 아이콘 */
+.place-swiper .swiper-button-next i,
+.place-swiper .swiper-button-prev i {
+  font-size: 24px;
+  color: #fff;
 }
 
 /* ----------라스트 섹션 하단--------------- */
@@ -1090,6 +1200,7 @@ section {
 .info .info-bottom {
   display: flex;
   gap: 5px;
+  justify-content: space-between;
 }
 .info .info-bottom a {
 }

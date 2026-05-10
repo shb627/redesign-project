@@ -14,6 +14,7 @@
     right: 0;
     left: 0;
     width: 100%;
+    margin: 0 auto;
     height: 48px;
     display: flex;
     /* padding: 0 40px; */
@@ -25,6 +26,53 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(20px);
   }
+  .header-container {
+    width: 100%;
+    max-width: 1440px;
+    display: grid;
+    height: 1000px;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 20px 0px;
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .eoul-band-container {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    position: relative;
+  }
+
+  .eoul-band-track {
+    width: max-content;
+
+    gap: 170px;
+    display: flex;
+    align-items: center;
+
+    animation: bandFlow 15s linear infinite;
+  }
+
+  .eoul-band-track img {
+    width: 100vw;
+    flex-shrink: 0;
+
+    object-fit: cover;
+  }
+
+  /* 반복 흐름 */
+  @keyframes bandFlow {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
   /* 라스트 */
 
   .last {
@@ -177,12 +225,15 @@
   }
   .footer .container {
     display: flex;
+    height: auto;
     flex-direction: column;
-
+    justify-content: center;
     font-size: 12px;
     color: #d7d7d7;
   }
   .footer .logo {
+    display: flex;
+    justify-content: flex-start;
   }
   .footer .logo a {
   }
@@ -192,8 +243,8 @@
   }
   .footer .info {
     display: flex;
-    gap: 40px;
-    justify-content: space-between;
+    gap: 16px; /* 40 -> 16 줄이기 */
+    justify-content: flex-start; /* space-between 제거 */
     flex-direction: column;
     font-size: 12px;
   }
@@ -219,6 +270,7 @@
     flex-direction: column;
     gap: 8px;
   }
+
   .footer .sns {
     display: flex;
     justify-content: center;
@@ -236,6 +288,19 @@
 
   .mb-menu-wrap {
     display: block;
+  }
+  .calender-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  .category-wrap {
+  }
+
+  .calender-tabs .tab-btn:nth-child(8),
+  .calender-tabs .tab-btn:nth-child(9) {
+    display: none;
   }
 }
 

@@ -79,11 +79,12 @@ const swiper2 = new Swiper(".place-swiper", {
   slidesPerView: 3, // 한 번에 보여줄 슬라이드 개수
   spaceBetween: 0, // 슬라이드 사이의 간격 (px)
   loop: true, // 무한 반복 여부 (선택사항)
+  autoplay: true,
 
   // 네비게이션 버튼 설정
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".fa-chevron-right",
+    prevEl: ".sfa-chevron-left",
   },
 
   // 반응형 설정 (선택사항: 모바일에서는 1개만 보이게 하고 싶을 때)
