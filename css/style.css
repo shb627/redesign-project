@@ -1173,21 +1173,25 @@ section {
 }
 .footer .container {
   display: grid;
-  gap: 72px;
+  gap: 200px;
   font-size: 12px;
   color: #d7d7d7;
   grid-template-columns: auto 1fr auto;
 }
 .footer .logo {
+  width: 100%;
+  flex: 1;
 }
 .footer .logo a {
 }
 .footer .logo img {
-  width: 170px;
+  width: 100%;
   object-fit: cover;
 }
 .footer .info {
   display: flex;
+  flex: 1;
+  max-width: 500px;
   gap: 40px;
   justify-content: space-between;
   flex-direction: column;
@@ -1210,6 +1214,8 @@ section {
   color: #d7d7d7;
 }
 .sns-wrap {
+  flex: 1;
+
   display: flex;
   justify-content: space-between;
   flex-direction: column;
